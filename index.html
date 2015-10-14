@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Battleship</title>
+<script src="js/MainLoop.js" type="text/javascript"></script>
+<script src="js/makeCanvas.js" type="text/javascript"></script>
+<script src="js/reset.js" type="text/javascript"></script>
+<script src="js/Frames.js" type="text/javascript"></script>
+<script src="js/Calculations.js" type="text/javascript"></script>
+<script src="js/Comet.js" type="text/javascript"></script>
+<script src="js/Rocket.js" type="text/javascript"></script>
+<script src="js/MainPlayer.js" type="text/javascript"></script>
+<script src="js/Background.js" type="text/javascript"></script>
+<script src="js/Controls.js" type="text/javascript"></script>
+<script src="js/Level.js" type="text/javascript"></script>
+<script src="js/Asteroid.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="div" style="margin-left:auto; margin-right:auto; width:1000px; height:auto;"></div>
+<div id="start" style="margin-left:auto; margin-right:auto; width:1000px; height:auto; text-align:center;">
+<input type='button' id='tryAgain' value='Try Again' onclick='Reset()' /><div id="time"></div><div id="comment"></div></div>
+</body>
+</html>
+<script>
+
+	//pravljenje canvas-a
+	document.getElementById('tryAgain').disabled = true;
+	makeCanvas(1000 /* sirina */, 500 /* visina */);
+	Loading();
+	var g 			= new Game();
+	var ship 		= new MainPlayer();
+	var bg 			= new Background();
+	var comet 		= new Comet(2);
+	var asteroid 	= new Asteroid(2);
+
+	setTimeout(function()
+	{
+		
+		g.Start();
+		g.AddObject(bg);
+		g.AddObject(ship);
+		var StartingLevel = new Level();
+		g.AddObject(StartingLevel);
+		g.AddObject(asteroid);
+
+	}, 2000);
+
+	setTimeout(function()
+	{
+
+		g.AddObject(comet);
+
+	}, 13000);
+
+</script>
