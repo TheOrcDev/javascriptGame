@@ -5,11 +5,13 @@ var Even = function(val){
     else
         return false;
 }
+
 var Random = function(nr)
 {
 	var number = Math.floor((Math.random()*nr)+1);
 	return number;
 }
+
 var Write = function(text, fontSize, x, y, red, green, blue)
 {
 	ctx.fillStyle = "rgb("+red+", "+green+", "+blue+")";

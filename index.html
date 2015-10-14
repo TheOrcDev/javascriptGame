@@ -1,8 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8">
 <title>Battleship</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
 <script src="js/MainLoop.js" type="text/javascript"></script>
 <script src="js/makeCanvas.js" type="text/javascript"></script>
 <script src="js/reset.js" type="text/javascript"></script>
@@ -18,14 +21,18 @@
 </head>
 
 <body>
-<div id="div" style="margin-left:auto; margin-right:auto; width:1000px; height:auto;"></div>
-<div id="start" style="margin-left:auto; margin-right:auto; width:1000px; height:auto; text-align:center;">
-<input type='button' id='tryAgain' value='Try Again' onclick='Reset()' /><div id="time"></div><div id="comment"></div></div>
+<div class="canvas" id="div"></div>
+<div id="start" class="canvas">
+	<button id='tryAgain' onclick='Reset()'>Try Again</button>
+	<div id="time"></div>
+	<div id="comment"></div>
+</div>
 </body>
 </html>
+
 <script>
 
-	//pravljenje canvas-a
+	//initiation
 	document.getElementById('tryAgain').disabled = true;
 	makeCanvas(1000 /* sirina */, 500 /* visina */);
 	Loading();
