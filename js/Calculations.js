@@ -1,4 +1,3 @@
-// JavaScript Document
 var Even = function(val){
     if (val%100 == 0)
         return true;

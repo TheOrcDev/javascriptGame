@@ -17,23 +17,33 @@ this.Update = function(){
 		ob.elapsed += '.0'; 
 	}
     document.getElementById("time").innerHTML = "Time: " + ob.elapsed;
-	
+
+    //START
+	if(ob.elapsed > 14)
+	{
+		this.Interval += 1;
+		if(this.Interval >= ob.CometWave)
+		{
+			ob.CometWave = 100;
+			this.Interval = 0;
+			var releaseComets = new Comet(ob.CometSpeed);
+			var releaseAsteroids = new Asteroid(ob.CometSpeed);
+			g.AddObject(releaseComets);
+			g.AddObject(releaseAsteroids);
+		}
+	}
+
 	if(ob.elapsed>1&&ob.elapsed<8){
-		Write("Greetings test subject, we made you to test our new ship prototype, just move along... Avoid those balls. Your life will be short.", 16, 500, 50, 250, 250, 250);
+		Write("Greetings test subject. Your life will be short.", 16, 500, 50, 250, 250, 250);
 	}
 	if(ob.elapsed>8&&ob.elapsed<10){
 		ob.CometWave = 55;
 		ob.CometSpeed = 4;
 		Write("Launching in THREE", 16, 500, 50, 250, 250, 250);
 	}
-	if(ob.elapsed>10&&ob.elapsed<13){
-		Write("Jack you released one comet you idiot!", 16, 500, 50, 250, 250, 250);
-	}
-	if(ob.elapsed>13&&ob.elapsed<15)
-		Write("Sry John :(", 16, 500, 50, 0, 150, 150);
-	if(ob.elapsed>15&&ob.elapsed<17)
-		Write("Nevermind, lets finish this and go home ... TWO", 16, 500, 50, 250, 250, 250);
-	if(ob.elapsed>17&&ob.elapsed<18)
+	if(ob.elapsed>10&&ob.elapsed<12)
+		Write("TWO", 16, 500, 50, 250, 250, 250);
+	if(ob.elapsed>12&&ob.elapsed<14)
 		Write("ONE", 16, 500, 50, 250, 250, 250);
 	
 	if(ob.elapsed>30&&ob.elapsed<35){
@@ -67,18 +77,6 @@ this.Update = function(){
 		ob.CometSpeed = 12;
 		Write("DIE!!!!!!", 28, 500, 50, 250, 250, 250);
 	}
-	
-	if(ob.elapsed>18)
-	{
-		this.Interval+=1;
-		if(this.Interval>=ob.CometWave)
-		{
-			this.Interval=0;
-			var releaseComets = new Comet(ob.CometSpeed);
-			var releaseAsteroids = new Asteroid(ob.CometSpeed);
-			g.AddObject(releaseComets);
-			g.AddObject(releaseAsteroids);
-		}
-	}
+
 }
 }

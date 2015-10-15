@@ -39,26 +39,15 @@
 	var g 			= new Game();
 	var ship 		= new MainPlayer();
 	var bg 			= new Background();
-	var comet 		= new Comet(2);
-	var asteroid 	= new Asteroid(2);
 
 	setTimeout(function()
 	{
-		
 		g.Start();
 		g.AddObject(bg);
 		g.AddObject(ship);
 		var StartingLevel = new Level();
 		g.AddObject(StartingLevel);
-		g.AddObject(asteroid);
 
 	}, 2000);
-
-	setTimeout(function()
-	{
-
-		g.AddObject(comet);
-
-	}, 13000);
 
 </script>
