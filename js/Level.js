@@ -24,23 +24,19 @@ this.Update = function(){
 		this.Interval += 1;
 		if(this.Interval >= ob.CometWave)
 		{
-			ob.CometWave = 100;
+			ob.CometWave = 120;
 			this.Interval = 0;
-			var releaseComets = new Comet(ob.CometSpeed);
-			var releaseAsteroids = new Asteroid(ob.CometSpeed);
+			var releaseComets 			= new Comet(ob.CometSpeed);
+			var releaseAsteroids 		= new Asteroid(ob.CometSpeed);
 			g.AddObject(releaseComets);
 			g.AddObject(releaseAsteroids);
 		}
 	}
 
-	if(ob.elapsed>1&&ob.elapsed<8){
+	if(ob.elapsed>1&&ob.elapsed<8)
 		Write("Greetings test subject. Your life will be short.", 16, 500, 50, 250, 250, 250);
-	}
-	if(ob.elapsed>8&&ob.elapsed<10){
-		ob.CometWave = 55;
-		ob.CometSpeed = 4;
+	if(ob.elapsed>8&&ob.elapsed<10)
 		Write("Launching in THREE", 16, 500, 50, 250, 250, 250);
-	}
 	if(ob.elapsed>10&&ob.elapsed<12)
 		Write("TWO", 16, 500, 50, 250, 250, 250);
 	if(ob.elapsed>12&&ob.elapsed<14)

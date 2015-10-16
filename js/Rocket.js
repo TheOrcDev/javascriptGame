@@ -1,4 +1,3 @@
-
 var Rocket = function()
 {
 	this.rocketImage = new Image();
