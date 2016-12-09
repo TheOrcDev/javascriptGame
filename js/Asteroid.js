@@ -29,12 +29,12 @@ var Asteroid = function(spd)
 			ctx.font 			= "22px Helvetica";
 			ctx.textAlign 		= "left";
 			ctx.textBaseline 	= "top";
-			ctx.fillText("DAMN!", ship.x, ship.y - 40);
+			ctx.fillText("JAO!", ship.x, ship.y - 40);
 
 			ctx.drawImage(this.explosionImage, ship.x - 30, ship.y - 40);
 
 			document.getElementById("tryAgain").disabled = false;
-			Write("He is dead boss! I love my job ;)", 24, 500, 350);
+			Write("SAD ĆU DA TE JE*EM!", 24, 500, 350);
 		}
 	}
 }
