@@ -36,6 +36,5 @@ var Comet = function(spd)
 			document.getElementById("tryAgain").disabled = false;
 			Write("DAJ MI PRSTEN!", 24, 500, 350);
 		}
-
 	}
 }

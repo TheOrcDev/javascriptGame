@@ -38,6 +38,8 @@
 	Loading();
 	var g 			= new Game();
 	var ship 		= new MainPlayer();
+	var rocket 		= new Rocket();
+	var asteroid 	= new Asteroid();
 	var bg 			= new Background();
 
 	setTimeout(function()
@@ -45,6 +47,8 @@
 		g.Start();
 		g.AddObject(bg);
 		g.AddObject(ship);
+		g.AddObject(rocket);
+		g.AddObject(asteroid);
 		var StartingLevel = new Level();
 		g.AddObject(StartingLevel);
 

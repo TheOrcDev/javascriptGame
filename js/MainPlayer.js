@@ -20,6 +20,9 @@ var MainPlayer = function()
 	    	
 		ctx.drawImage(this.shipImage, this.x, this.y);
 	//KONTROLE
+
+		var shotsFired = 0;
+
 		//gore--------------------------
 		if (38 in keysDown) 
 			this.y -= this.speed;
@@ -37,10 +40,9 @@ var MainPlayer = function()
 		{
 
 			//na space se ispaljuje raketa, pravi se novi objekat i dodaje se u loop, i objekat se stavlja u niz Rockets
-			var rocket = new Rocket();
-			g.AddObject(rocket);		
-			this.Rockets.push(rocket);
-
+				var rocket = new Rocket();
+				g.AddObject(rocket);
+				this.Rockets.push(rocket);
 		}
 
 	}
