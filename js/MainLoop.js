@@ -13,7 +13,7 @@ var GameLoop = function()
 			
 		var currtime = new Date();
 		var frametimedifference = currtime - ob.lasttime;
-		if(frametimedifference >= (1000/60)) 
+		if(frametimedifference >= (1000/60))
 		{		
 			ob.lasttime = currtime;
 		}

@@ -24,38 +24,49 @@ this.Update = function(){
 		this.Interval += 1;
 		if(this.Interval >= ob.CometWave)
 		{
-			ob.CometWave = 120;
+			ob.CometWave = 100;
 			this.Interval = 0;
-			var releaseComets 			= new Comet(ob.CometSpeed);
-			var releaseAsteroids 		= new Asteroid(ob.CometSpeed);
+			var releaseComets = new Comet(ob.CometSpeed);
+			var releaseAsteroids = new Asteroid(ob.CometSpeed);
 			g.AddObject(releaseComets);
 			g.AddObject(releaseAsteroids);
 		}
 	}
 
+<<<<<<< HEAD
 	if(ob.elapsed>1&&ob.elapsed<8)
-		Write("Greetings test subject. Your life will be short.", 16, 500, 50, 250, 250, 250);
+		Write("Niko od nas ne bi treb'o da se šeta sam.", 16, 500, 50, 250, 250, 250);
 	if(ob.elapsed>8&&ob.elapsed<10)
+		Write("Naročito ne ti...", 16, 500, 50, 250, 250, 250);
+=======
+	if(ob.elapsed>1&&ob.elapsed<8){
+		Write("Greetings test subject. Your life will be short.", 16, 500, 50, 250, 250, 250);
+	}
+	if(ob.elapsed>8&&ob.elapsed<10){
+		ob.CometWave = 55;
+		ob.CometSpeed = 4;
 		Write("Launching in THREE", 16, 500, 50, 250, 250, 250);
+	}
+>>>>>>> parent of 8a0c735... Fix
 	if(ob.elapsed>10&&ob.elapsed<12)
-		Write("TWO", 16, 500, 50, 250, 250, 250);
+		Write("...jer mnogo toga...", 16, 500, 50, 250, 250, 250);
 	if(ob.elapsed>12&&ob.elapsed<14)
-		Write("ONE", 16, 500, 50, 250, 250, 250);
+		Write("...od tebe zavisi.", 16, 500, 50, 250, 250, 250);
 	
 	if(ob.elapsed>30&&ob.elapsed<35){
 		ob.CometWave = 80;
 		ob.CometSpeed = 4;
-		Write("Hmmmmmmmmm, interesting... I will release more...", 18, 500, 50, 250, 250, 250);
+		Write("...de li se denuo??", 18, 500, 50, 250, 250, 250);
 	}
 	if(ob.elapsed>38&&ob.elapsed<45){
 		ob.CometWave = 60;
 		ob.CometSpeed = 6;
-		Write("Hey boss, this guy is still alive! I will release more comets!", 22, 500, 50, 250, 250, 250);
+		Write("Je*aću te, skidaj gaće.", 22, 500, 50, 250, 250, 250);
 	}
 	if(ob.elapsed>50&&ob.elapsed<55)
-		Write("Let me see that John...", 22, 500, 50, 250, 0, 0);
+		Write("Bobo! Bobo smraade!!!", 22, 500, 50, 250, 0, 0);
 	if(ob.elapsed>55&&ob.elapsed<60)
-		Write("Son you have my permission. Release everything!", 22, 500, 50, 250, 0, 0);
+		Write("SMRAAADEEE!!!!", 22, 500, 50, 250, 0, 0);
 	
 	if(ob.elapsed>60&&ob.elapsed<100){
 		ob.CometWave = 10;

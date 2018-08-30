@@ -2,10 +2,8 @@ var Background = function()
 {
 	bgReady = false;
 	this.bgImage = new Image();
-	//this.bgImageFliped = new Image();
 	this.x = 0;
-	this.bgImage.src = "images/urke-FONcy-guy.png";
-	//this.bgImageFliped.src = "images/spaceFliped.png";
+	this.bgImage.src = "images/background.jpg";
 	this.Update = function(){
 		this.repeat = this.x - this.bgImage.width;
 		ctx.drawImage(this.bgImage, this.x, 0);
