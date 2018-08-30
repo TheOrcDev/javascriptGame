@@ -1,10 +1,10 @@
 var Asteroid = function(spd)
 {
 	this.asteroidImage 		= new Image();
-	this.asteroidImage.src 	= "images/rock.png";
+	this.asteroidImage.src 	= "./images/rock.png";
 
 	this.explosionImage 		= new Image();
-	this.explosionImage.src 	= "images/explosion.png";
+	this.explosionImage.src 	= "./images/explosion.png";
 
 	this.x = 0;
 	this.y = Random(500);
