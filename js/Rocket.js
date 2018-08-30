@@ -2,7 +2,7 @@
 var Rocket = function()
 {
 	this.rocketImage = new Image();
-	this.rocketImage.src = "./public-bobo/images/rocket.png";
+	this.rocketImage.src = "/bobo-folder/public-bobo/images/rocket.png";
 	this.rocketLaunched = false;
 	var o = this;
 	this.x = ship.x-30;

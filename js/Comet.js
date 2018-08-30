@@ -1,10 +1,10 @@
 var Comet = function(spd)
 {
 	this.cometImage 			= new Image();
-	this.cometImage.src 		= "./public-bobo/images/comet.png";
+	this.cometImage.src 		= "/bobo-folder/public-bobo/images/comet.png";
 
 	this.explosionImage 		= new Image();
-	this.explosionImage.src 	= "./public-bobo/images/explosion.png";
+	this.explosionImage.src 	= "/bobo-folder/public-bobo/images/explosion.png";
 
 	this.x 						= 0;
 	this.y 						= Random(500);
