@@ -33,21 +33,10 @@ this.Update = function(){
 		}
 	}
 
-<<<<<<< HEAD
 	if(ob.elapsed>1&&ob.elapsed<8)
 		Write("Niko od nas ne bi treb'o da se šeta sam.", 16, 500, 50, 250, 250, 250);
 	if(ob.elapsed>8&&ob.elapsed<10)
 		Write("Naročito ne ti...", 16, 500, 50, 250, 250, 250);
-=======
-	if(ob.elapsed>1&&ob.elapsed<8){
-		Write("Greetings test subject. Your life will be short.", 16, 500, 50, 250, 250, 250);
-	}
-	if(ob.elapsed>8&&ob.elapsed<10){
-		ob.CometWave = 55;
-		ob.CometSpeed = 4;
-		Write("Launching in THREE", 16, 500, 50, 250, 250, 250);
-	}
->>>>>>> parent of 8a0c735... Fix
 	if(ob.elapsed>10&&ob.elapsed<12)
 		Write("...jer mnogo toga...", 16, 500, 50, 250, 250, 250);
 	if(ob.elapsed>12&&ob.elapsed<14)
