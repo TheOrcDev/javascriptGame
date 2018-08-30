@@ -3,7 +3,7 @@ var MainPlayer = function()
 {
 //image za main player-a
 	this.shipImage = new Image();
-	this.shipImage.src = "./images/ship.png";
+	this.shipImage.src = "./public-bobo/images/ship.png";
 //pravljenje niza za rakete
 	this.Rockets = new Array();
 	this.obj;
